@@ -7,9 +7,12 @@ root.geometry('600x600')
 global health 
 health = 10
 
+
+# for defing age
 def age_function():
     age_label = Label(root, text="Hi, "+name.get()+" What's your age?")
     age_label.pack()
+    # age_label.pack1()
     global age
     age = Entry(root)
     age.pack()
@@ -23,11 +26,14 @@ def game_start_0_function():
         welcome_label.pack()
         play_game_button = Button(root, text="Play", command=game_start_1_function)
         play_game_button.pack()
+
+    # else factor
         
     else:
         cant_play_label = Label(root, text="Sorry you have to wait till you turn 18")
         cant_play_label.pack()
 
+# starting function
 def game_start_1_function():
     game_line_1 = Label(root, text="Road is dividing into left and right")
     game_line_1.pack()
@@ -55,6 +61,8 @@ def game_start_2_function():
         user_decision_1_2_submit = Button(root, text="Submit", command=game_start_3_function)
         user_decision_1_2_submit.pack()
 
+
+# imp function
 
 def game_start_3_function():
     if user_decision_1_2.get() == "house":
